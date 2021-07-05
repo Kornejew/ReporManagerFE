@@ -1,0 +1,13 @@
+<p>report-view START</p>
+<div class="d-grid gap-3">
+  <div *ngFor="let report of reports" class="card ms-5" style="width:18rem">
+    <div class="card-body">
+      <h5 class="card-title">Report-ID:   {{report.id}}</h5>
+      <h6 class="card-subtitle">{{report.startDate | date : 'shortDate'}} - {{report.endDate | date : 'shortDate'}}</h6>
+      <p class="card-text">User:{{report.user.forename}} {{report.user.surname}}<br>
+        Company:     {{report.company.name}}<br>
+        Instructor:  {{report.instructorName}}</p>
+    </div>
+  </div>
+</div>
+<p>report-view END</p>

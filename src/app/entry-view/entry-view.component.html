@@ -1,0 +1,24 @@
+<table class="table table-dark table-hover">
+  <thead>
+  <tr>
+    <th scope="col">Date</th>
+    <th scope="col">Description</th>
+    <th scope="col">Start Time</th>
+    <th scope="col">End Time</th>
+    <th scope="col">Duration</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entry of entries">
+    <td>{{entry.date | date:'shortDate'}}</td>
+    <td>{{entry.description}}</td>
+    <td>{{entry.startTime}}</td>
+    <td>{{entry.endTime}}</td>
+    <td>{{entry.duration}}</td>
+    <td>
+      <button class="btn btn-light btn-sm" routerLink="/entry" routerLinkActive="aktiv" type="button"> Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
